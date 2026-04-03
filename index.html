@@ -344,6 +344,20 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
   <div class="foot-text">&copy; 2025 Golden State Blueprint & Printing. All rights reserved.</div>
 </footer>
 
+<!-- COMING SOON POPUP -->
+<div id="comingSoon" style="position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s">
+  <div style="background:var(--dark);border:2px solid var(--gold);border-radius:16px;max-width:500px;width:90%;overflow:hidden;position:relative">
+    <img src="diseno de planos coming soon proximamente.jpg" alt="Blueprint Design Coming Soon" style="width:100%;height:200px;object-fit:cover">
+    <div style="padding:28px;text-align:center">
+      <div style="font-size:11px;font-weight:700;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:8px">Coming Soon</div>
+      <h3 style="font-size:24px;font-weight:800;color:var(--white);margin-bottom:12px;font-family:var(--font)">Blueprint Design Services</h3>
+      <p style="font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:24px">We're expanding! Soon we'll offer professional architectural blueprint design services. Stay tuned.</p>
+      <button onclick="document.getElementById('comingSoon').style.opacity='0';document.getElementById('comingSoon').style.pointerEvents='none'" style="padding:12px 32px;background:var(--gold);color:var(--black);font-weight:800;font-size:13px;border:none;border-radius:4px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;transition:.3s">Got It</button>
+    </div>
+    <button onclick="document.getElementById('comingSoon').style.opacity='0';document.getElementById('comingSoon').style.pointerEvents='none'" style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.2);color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">&#x2715;</button>
+  </div>
+</div>
+
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLB()">
   <button class="lb-close" onclick="closeLB()">&#x2715;</button>
@@ -351,6 +365,12 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
 </div>
 
 <script>
+// Coming Soon popup - show after 2 seconds
+setTimeout(()=>{
+  const cs=document.getElementById('comingSoon');
+  cs.style.opacity='1';cs.style.pointerEvents='auto';
+},2000);
+
 function openLB(el){
   const img=el.querySelector('img');
   document.getElementById('lbImg').src=img.src;
