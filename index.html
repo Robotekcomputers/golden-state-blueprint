@@ -52,6 +52,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:70px;dis
 .btn-outline{padding:16px 40px;border:2px solid rgba(201,162,39,0.4);color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:.3s;display:inline-block}
 .btn-outline:hover{border-color:var(--gold);background:rgba(201,162,39,0.08)}
 
+/* Rotating words */
+.hero-rotate{display:inline-block;position:relative;height:1.15em;overflow:hidden;vertical-align:bottom}
+.hero-rotate .word{display:block;animation:rotateWords 8s infinite;opacity:0;position:absolute;left:0;top:0;width:max-content}
+.hero-rotate .word:nth-child(1){animation-delay:0s}
+.hero-rotate .word:nth-child(2){animation-delay:2s}
+.hero-rotate .word:nth-child(3){animation-delay:4s}
+.hero-rotate .word:nth-child(4){animation-delay:6s}
+@keyframes rotateWords{
+  0%,5%{opacity:0;transform:translateY(100%)}
+  10%,20%{opacity:1;transform:translateY(0)}
+  25%,100%{opacity:0;transform:translateY(-100%)}
+}
+
 /* Scroll hint */
 .scroll-down{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:var(--gray-dark);font-size:10px;letter-spacing:3px;text-transform:uppercase;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
@@ -155,8 +168,8 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
   <div class="hero-content">
     <img src="LOGO.png" alt="Golden State Blueprint" class="hero-logo">
     <div class="hero-tagline">North Hollywood, CA</div>
-    <h1 class="hero-title">We Print <span>Everything</span></h1>
-    <p class="hero-sub">Blueprints, banners, vehicle wraps, business cards, signage, and large format printing. If you can imagine it, we can print it.</p>
+    <h1 class="hero-title">We Make Your<br><span class="hero-rotate"><span class="word">Business Cards</span><span class="word">Banners</span><span class="word">Vehicle Wraps</span><span class="word">Blueprints</span></span></h1>
+    <p class="hero-sub">Premium printing for your business. Business cards, banners, large format, vehicle wraps, signage, and more. Same day available.</p>
     <div class="hero-btns">
       <a href="tel:8183187439" class="btn-gold">Call (818) 318-7439</a>
       <a href="#gallery" class="btn-outline">See Our Work</a>
@@ -170,14 +183,14 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
   <div class="sec-label">What We Do</div>
   <div class="sec-title">Our Services</div>
   <div class="srv-grid">
-    <div class="srv-card">
-      <span class="srv-icon">&#128220;</span>
-      <div class="srv-name">Blueprints</div>
-      <div class="srv-desc">Plotting & scanning of architectural plans</div>
+    <div class="srv-card" style="border-color:rgba(201,162,39,0.2);background:rgba(201,162,39,0.04)">
+      <span class="srv-icon">&#128196;</span>
+      <div class="srv-name" style="color:var(--gold)">Business Cards</div>
+      <div class="srv-desc">Premium cards, same day available</div>
     </div>
-    <div class="srv-card">
+    <div class="srv-card" style="border-color:rgba(201,162,39,0.2);background:rgba(201,162,39,0.04)">
       <span class="srv-icon">&#127463;</span>
-      <div class="srv-name">Banners</div>
+      <div class="srv-name" style="color:var(--gold)">Banners</div>
       <div class="srv-desc">Indoor & outdoor vinyl banners any size</div>
     </div>
     <div class="srv-card">
@@ -186,9 +199,9 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
       <div class="srv-desc">Full & partial wraps, fleet graphics</div>
     </div>
     <div class="srv-card">
-      <span class="srv-icon">&#128196;</span>
-      <div class="srv-name">Business Cards</div>
-      <div class="srv-desc">Premium cards, same day available</div>
+      <span class="srv-icon">&#128220;</span>
+      <div class="srv-name">Blueprints</div>
+      <div class="srv-desc">Plotting & scanning of architectural plans</div>
     </div>
     <div class="srv-card">
       <span class="srv-icon">&#128444;</span>
@@ -286,7 +299,7 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
         <div class="c-icon">&#128231;</div>
         <div>
           <div class="c-label">Email</div>
-          <div class="c-val"><a href="mailto:info@goldenstate-blueprint.com">info@goldenstate-blueprint.com</a></div>
+          <div class="c-val"><a href="mailto:goldenstateblueprint@goldenstate-blueprint.com">goldenstateblueprint@goldenstate-blueprint.com</a></div>
         </div>
       </div>
       <div class="c-item">
