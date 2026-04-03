@@ -53,16 +53,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:70px;dis
 .btn-outline:hover{border-color:var(--gold);background:rgba(201,162,39,0.08)}
 
 /* Rotating words */
-.hero-rotate{display:inline-block;position:relative;height:1.15em;overflow:hidden;vertical-align:bottom}
-.hero-rotate .word{display:block;animation:rotateWords 8s infinite;opacity:0;position:absolute;left:0;top:0;width:max-content}
+.hero-rotate{display:inline-block;position:relative;height:1.2em;overflow:hidden;vertical-align:bottom;min-width:280px}
+.hero-rotate .word{display:block;position:absolute;left:0;right:0;top:0;opacity:0;color:var(--gold);animation:rotateWords 12s infinite}
 .hero-rotate .word:nth-child(1){animation-delay:0s}
-.hero-rotate .word:nth-child(2){animation-delay:2s}
-.hero-rotate .word:nth-child(3){animation-delay:4s}
-.hero-rotate .word:nth-child(4){animation-delay:6s}
+.hero-rotate .word:nth-child(2){animation-delay:3s}
+.hero-rotate .word:nth-child(3){animation-delay:6s}
+.hero-rotate .word:nth-child(4){animation-delay:9s}
 @keyframes rotateWords{
-  0%,5%{opacity:0;transform:translateY(100%)}
-  10%,20%{opacity:1;transform:translateY(0)}
-  25%,100%{opacity:0;transform:translateY(-100%)}
+  0%{opacity:0;transform:translateY(60px)}
+  5%,20%{opacity:1;transform:translateY(0)}
+  25%{opacity:0;transform:translateY(-60px)}
+  100%{opacity:0}
 }
 
 /* Scroll hint */
@@ -215,13 +216,23 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
     </div>
     <div class="srv-card">
       <span class="srv-icon">&#127912;</span>
+      <div class="srv-name">Stickers & Decals</div>
+      <div class="srv-desc">Custom stickers, labels, vinyl decals</div>
+    </div>
+    <div class="srv-card">
+      <span class="srv-icon">&#128424;</span>
+      <div class="srv-name">Plan Copies</div>
+      <div class="srv-desc">Blueprint copies, scanning, large format B&W</div>
+    </div>
+    <div class="srv-card">
+      <span class="srv-icon">&#127912;</span>
       <div class="srv-name">Graphic Design</div>
       <div class="srv-desc">Logos, flyers, marketing materials</div>
     </div>
     <div class="srv-card">
-      <span class="srv-icon">&#128424;</span>
-      <div class="srv-name">Copies & Scanning</div>
-      <div class="srv-desc">B&W and color copies, document scanning</div>
+      <span class="srv-icon">&#128187;</span>
+      <div class="srv-name">Web Design</div>
+      <div class="srv-desc">Websites for your business</div>
     </div>
   </div>
 </section>
@@ -234,32 +245,32 @@ footer img{height:40px;margin-bottom:16px;opacity:0.7}
   </div>
   <div class="gallery-grid">
     <div class="gallery-item wide" onclick="openLB(this)">
-      <img src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&h=500&fit=crop" alt="Large format banner printing" loading="lazy">
-      <div class="gallery-label">Large Format Banners</div>
+      <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?w=900&q=80" alt="Business cards premium printing" loading="lazy">
+      <div class="gallery-label">Premium Business Cards</div>
     </div>
     <div class="gallery-item" onclick="openLB(this)">
-      <img src="https://images.unsplash.com/photo-1572025442646-866d16c84a54?w=500&h=400&fit=crop" alt="Business cards" loading="lazy">
-      <div class="gallery-label">Business Cards</div>
+      <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&q=80" alt="Large vinyl banner" loading="lazy">
+      <div class="gallery-label">Vinyl Banners</div>
     </div>
     <div class="gallery-item" onclick="openLB(this)">
-      <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=500&h=400&fit=crop" alt="Vehicle wrap" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80" alt="Vehicle wrap design" loading="lazy">
       <div class="gallery-label">Vehicle Wraps</div>
     </div>
     <div class="gallery-item" onclick="openLB(this)">
-      <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=500&h=400&fit=crop" alt="Blueprints and architectural plans" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=600&q=80" alt="Architectural blueprints" loading="lazy">
       <div class="gallery-label">Blueprints & Plans</div>
     </div>
     <div class="gallery-item wide" onclick="openLB(this)">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=500&fit=crop" alt="Signage and storefront" loading="lazy">
-      <div class="gallery-label">Storefront Signage</div>
+      <img src="https://images.unsplash.com/photo-1563906267088-b029e7101114?w=900&q=80" alt="Store signage" loading="lazy">
+      <div class="gallery-label">Signage & Displays</div>
     </div>
     <div class="gallery-item" onclick="openLB(this)">
-      <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=500&h=400&fit=crop" alt="Poster printing" loading="lazy">
-      <div class="gallery-label">Poster & Canvas</div>
+      <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Custom stickers" loading="lazy">
+      <div class="gallery-label">Stickers & Decals</div>
     </div>
     <div class="gallery-item" onclick="openLB(this)">
-      <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=500&h=400&fit=crop" alt="Flyer design" loading="lazy">
-      <div class="gallery-label">Flyers & Marketing</div>
+      <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&q=80" alt="Large format poster" loading="lazy">
+      <div class="gallery-label">Posters & Canvas</div>
     </div>
     <div class="gallery-item" onclick="openLB(this)">
       <img src="FOTO EXTERNA.jpg" alt="Golden State Blueprint storefront" loading="lazy">
