@@ -3,390 +3,366 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Golden State Blueprint & Printing - Large format printing, business cards, banners, vehicle wraps, blueprints, and more in North Hollywood, CA.">
-<title>Golden State Blueprint & Printing | Large Format Printing in North Hollywood</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Golden State Blueprint & Printing - Large format printing, business cards, banners, vehicle wraps, blueprints in North Hollywood, CA.">
+<title>Golden State Blueprint & Printing | North Hollywood</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --black:#0c0c0c;--dark:#161616;--surface:#1e1e1e;
-  --gold:#c9a227;--gold-light:#e8c84a;--gold-dark:#9a7a10;
-  --white:#f5f2eb;--gray:#8a8578;--gray-dark:#4a4540;
-  --font:'Montserrat',sans-serif;
-}
+:root{--black:#0a0a0a;--dark:#131313;--gold:#c9a227;--gold2:#e8c84a;--white:#f5f2eb;--gray:#7a7568;--font:'Montserrat',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--black);color:var(--gray);overflow-x:hidden}
 ::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-thumb{background:var(--gold-dark);border-radius:2px}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+a{text-decoration:none;color:inherit}
 img{max-width:100%}
-a{text-decoration:none}
 
 /* ═══ NAV ═══ */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;background:rgba(12,12,12,0.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,162,39,0.08)}
-.nav-logo img{height:45px}
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gray);transition:.3s}
-.nav-links a:hover{color:var(--gold)}
-.nav-call{padding:10px 24px;background:var(--gold);color:var(--black);font-weight:800;font-size:12px;letter-spacing:1px;border-radius:4px;transition:.3s}
-.nav-call:hover{background:var(--gold-light);box-shadow:0 0 20px rgba(201,162,39,0.4)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,162,39,0.06)}
+nav img{height:40px}
+.nav-r{display:flex;align-items:center;gap:28px}
+.nav-r a{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);transition:.3s}
+.nav-r a:hover{color:var(--gold)}
+.nav-call{background:var(--gold);color:var(--black);padding:8px 20px;border-radius:4px;font-weight:800;font-size:11px;letter-spacing:1px}
+.nav-call:hover{background:var(--gold2)}
 .hamburger{display:none;cursor:pointer}
-.hamburger span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0}
-.mob-overlay{position:fixed;inset:0;background:rgba(12,12,12,0.97);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;pointer-events:none;transition:.3s}
-.mob-overlay.open{opacity:1;pointer-events:auto}
-.mob-overlay a{font-size:24px;font-weight:700;color:var(--white);letter-spacing:3px;text-transform:uppercase}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);margin:4px 0}
+.mob{position:fixed;inset:0;background:rgba(10,10,10,0.97);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:.3s}
+.mob.open{opacity:1;pointer-events:auto}
+.mob a{font-size:20px;font-weight:700;color:var(--white);letter-spacing:3px;text-transform:uppercase}
 
-/* ═══ HERO — FULL SCREEN ═══ */
-#hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('FOTO EXTERNA.jpg') center/cover;filter:brightness(0.3)}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,12,0.6) 0%,rgba(12,12,12,0.9) 100%)}
-.hero-content{position:relative;z-index:1;padding:0 20px}
-.hero-logo{width:320px;margin:0 auto 32px;filter:drop-shadow(0 0 20px rgba(201,162,39,0.3))}
-.hero-tagline{font-size:clamp(12px,2vw,16px);font-weight:600;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-.hero-title{font-size:clamp(32px,6vw,64px);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:24px;letter-spacing:-1px}
-.hero-title span{color:var(--gold)}
-.hero-sub{font-size:16px;color:var(--gray);max-width:500px;margin:0 auto 36px;font-weight:300;line-height:1.7}
-.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn-gold{padding:16px 40px;background:var(--gold);color:var(--black);font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:.3s;display:inline-block}
-.btn-gold:hover{background:var(--gold-light);box-shadow:0 8px 30px rgba(201,162,39,0.3);transform:translateY(-2px)}
-.btn-outline{padding:16px 40px;border:2px solid rgba(201,162,39,0.4);color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:.3s;display:inline-block}
-.btn-outline:hover{border-color:var(--gold);background:rgba(201,162,39,0.08)}
+/* ═══ HERO — ORBITAL ═══ */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 20px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(201,162,39,0.06) 0%,transparent 60%)}
 
-/* Rotating words */
-.hero-rotate{display:inline-block;position:relative;height:1.2em;overflow:hidden;vertical-align:bottom;min-width:280px}
-.hero-rotate .word{display:block;position:absolute;left:0;right:0;top:0;opacity:0;color:var(--gold);animation:rotateWords 12s infinite}
-.hero-rotate .word:nth-child(1){animation-delay:0s}
-.hero-rotate .word:nth-child(2){animation-delay:3s}
-.hero-rotate .word:nth-child(3){animation-delay:6s}
-.hero-rotate .word:nth-child(4){animation-delay:9s}
-@keyframes rotateWords{
-  0%{opacity:0;transform:translateY(60px)}
-  5%,20%{opacity:1;transform:translateY(0)}
-  25%{opacity:0;transform:translateY(-60px)}
-  100%{opacity:0}
-}
+.orbit-container{position:relative;width:min(600px,85vw);height:min(600px,85vw)}
+.orbit-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:10;width:280px}
+.orbit-logo{width:180px;filter:drop-shadow(0 0 30px rgba(201,162,39,0.3));margin-bottom:16px}
+.orbit-title{font-size:clamp(20px,3vw,28px);font-weight:900;color:var(--white);line-height:1.2;letter-spacing:-0.5px}
+.orbit-title span{color:var(--gold)}
+.orbit-sub{font-size:12px;color:var(--gray);margin-top:8px;font-weight:400}
 
-/* Scroll hint */
-.scroll-down{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:var(--gray-dark);font-size:10px;letter-spacing:3px;text-transform:uppercase;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+/* Orbiting items */
+.orbit-ring{position:absolute;inset:0;animation:orbit 30s linear infinite}
+@keyframes orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 
-/* ═══ SERVICES — ICON GRID ═══ */
-#services{padding:100px 5%;text-align:center}
-.sec-label{font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.sec-title{font-size:clamp(28px,4vw,42px);font-weight:800;color:var(--white);margin-bottom:48px;letter-spacing:-0.5px}
-.srv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px;max-width:1000px;margin:0 auto}
-.srv-card{background:var(--dark);border:1px solid rgba(255,255,255,0.04);border-radius:12px;padding:32px 20px;text-align:center;transition:.3s;cursor:default}
-.srv-card:hover{border-color:rgba(201,162,39,0.2);transform:translateY(-4px)}
-.srv-icon{font-size:36px;margin-bottom:12px;display:block}
-.srv-name{font-size:14px;font-weight:700;color:var(--white);letter-spacing:0.5px}
-.srv-desc{font-size:11px;color:var(--gray);margin-top:6px;font-weight:300}
+.orbit-item{position:absolute;width:90px;height:90px;border-radius:16px;overflow:hidden;border:2px solid rgba(201,162,39,0.15);box-shadow:0 8px 32px rgba(0,0,0,0.5);transition:transform .3s;cursor:pointer}
+.orbit-item:hover{transform:scale(1.3)!important;z-index:20;border-color:var(--gold)}
+.orbit-item img{width:100%;height:100%;object-fit:cover}
+.orbit-item .orbit-label{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.8);color:var(--gold);font-size:7px;font-weight:700;text-align:center;padding:3px;letter-spacing:1px;text-transform:uppercase;opacity:0;transition:.3s}
+.orbit-item:hover .orbit-label{opacity:1}
 
-/* ═══ GALLERY — BIG IMAGES ═══ */
-#gallery{padding:80px 0;background:var(--dark)}
-.gallery-header{text-align:center;padding:0 20px;margin-bottom:48px}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
-.gallery-item{position:relative;overflow:hidden;aspect-ratio:4/3;cursor:pointer}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.gallery-item:hover img{transform:scale(1.08)}
-.gallery-item .gallery-label{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.85));color:var(--white);font-size:13px;font-weight:600;letter-spacing:1px;opacity:0;transition:.3s;text-transform:uppercase}
-.gallery-item:hover .gallery-label{opacity:1}
-/* Featured items span 2 cols */
-.gallery-item.wide{grid-column:span 2}
-.gallery-item.tall{grid-row:span 2}
+/* Counter-rotate items so they stay upright */
+.orbit-item{animation:counter-orbit 30s linear infinite}
+@keyframes counter-orbit{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
 
-/* ═══ CTA BANNER ═══ */
-#cta{padding:80px 5%;text-align:center;background:linear-gradient(135deg,var(--gold-dark),var(--gold));position:relative;overflow:hidden}
-#cta::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(0,0,0,0.03) 20px,rgba(0,0,0,0.03) 40px)}
-.cta-title{font-size:clamp(28px,5vw,48px);font-weight:800;color:var(--black);letter-spacing:-1px;margin-bottom:16px;position:relative}
-.cta-sub{font-size:16px;color:rgba(0,0,0,0.6);margin-bottom:32px;position:relative;font-weight:500}
-.btn-dark{padding:16px 40px;background:var(--black);color:var(--gold);font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:.3s;display:inline-block;position:relative}
-.btn-dark:hover{box-shadow:0 8px 30px rgba(0,0,0,0.3);transform:translateY(-2px)}
+/* Position items around the circle */
+.orbit-item:nth-child(1){top:0;left:50%;margin-left:-45px}
+.orbit-item:nth-child(2){top:12%;right:5%;margin-top:-45px}
+.orbit-item:nth-child(3){top:50%;right:-5%;margin-top:-45px}
+.orbit-item:nth-child(4){bottom:12%;right:8%}
+.orbit-item:nth-child(5){bottom:-2%;left:50%;margin-left:-45px}
+.orbit-item:nth-child(6){bottom:12%;left:8%}
+.orbit-item:nth-child(7){top:50%;left:-5%;margin-top:-45px}
+.orbit-item:nth-child(8){top:12%;left:5%}
+
+.hero-cta{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);display:flex;gap:16px;z-index:10;flex-wrap:wrap;justify-content:center}
+.btn-g{padding:14px 32px;background:var(--gold);color:var(--black);font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:.3s}
+.btn-g:hover{background:var(--gold2);box-shadow:0 8px 24px rgba(201,162,39,0.3);transform:translateY(-2px)}
+.btn-o{padding:14px 32px;border:2px solid rgba(201,162,39,0.3);color:var(--gold);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:.3s}
+.btn-o:hover{border-color:var(--gold);background:rgba(201,162,39,0.06)}
+
+/* ═══ SERVICES STRIP ═══ */
+#services{padding:60px 0;background:var(--dark);border-top:1px solid rgba(201,162,39,0.06);border-bottom:1px solid rgba(201,162,39,0.06);overflow:hidden}
+.srv-scroll{display:flex;gap:40px;animation:scroll 20s linear infinite;width:max-content}
+.srv-scroll:hover{animation-play-state:paused}
+.srv-chip{display:flex;align-items:center;gap:10px;white-space:nowrap;padding:12px 24px;background:rgba(201,162,39,0.04);border:1px solid rgba(201,162,39,0.1);border-radius:40px;transition:.3s;cursor:default;flex-shrink:0}
+.srv-chip:hover{border-color:var(--gold);background:rgba(201,162,39,0.08)}
+.srv-chip span:first-child{font-size:20px}
+.srv-chip span:last-child{font-size:12px;font-weight:700;color:var(--white);letter-spacing:1px;text-transform:uppercase}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══ SERVICE CARDS ═══ */
+.svc{border-radius:12px;overflow:hidden;background:var(--dark);border:1px solid rgba(255,255,255,0.04);cursor:pointer;transition:.3s}
+.svc:hover{border-color:rgba(201,162,39,0.2);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+.svc img{width:100%;height:180px;object-fit:cover;transition:transform .4s}
+.svc:hover img{transform:scale(1.05)}
+.svc-info{padding:20px}
+.svc-info h3{font-size:16px;font-weight:800;color:var(--white);margin-bottom:8px;letter-spacing:0.3px}
+.svc-info p{font-size:12px;color:var(--gray);line-height:1.7;font-weight:400}
+
+/* ═══ GALLERY — MASONRY ═══ */
+#gallery{padding:80px 5%}
+.gallery-head{text-align:center;margin-bottom:48px}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.sec-title{font-size:clamp(28px,4vw,40px);font-weight:900;color:var(--white);letter-spacing:-0.5px}
+
+.g-grid{columns:3;column-gap:12px}
+.g-item{break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;position:relative;cursor:pointer}
+.g-item img{width:100%;display:block;transition:transform .5s}
+.g-item:hover img{transform:scale(1.05)}
+.g-item .g-label{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.9));font-size:12px;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;opacity:0;transition:.3s;transform:translateY(10px)}
+.g-item:hover .g-label{opacity:1;transform:translateY(0)}
+
+/* ═══ CTA ═══ */
+#cta{padding:80px 5%;text-align:center;background:var(--gold);position:relative}
+#cta h2{font-size:clamp(28px,5vw,48px);font-weight:900;color:var(--black);letter-spacing:-1px;margin-bottom:12px}
+#cta p{font-size:15px;color:rgba(0,0,0,0.5);margin-bottom:28px;font-weight:500}
+.btn-bk{padding:16px 40px;background:var(--black);color:var(--gold);font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;display:inline-block;transition:.3s}
+.btn-bk:hover{box-shadow:0 8px 30px rgba(0,0,0,0.3);transform:translateY(-2px)}
 
 /* ═══ CONTACT ═══ */
 #contact{padding:80px 5%}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1000px;margin:0 auto}
-.contact-info{display:flex;flex-direction:column;gap:28px}
-.c-item{display:flex;gap:16px;align-items:flex-start}
-.c-icon{width:44px;height:44px;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.c-label{font-size:10px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;font-weight:600}
-.c-val{font-size:15px;color:var(--white);margin-top:2px;font-weight:500}
-.c-val a{color:var(--gold)}
-.contact-map{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.05)}
-.contact-map iframe{width:100%;height:100%;min-height:300px;border:none;filter:grayscale(1) invert(1) contrast(1.1) brightness(0.7)}
+.c-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:40px auto 0}
+.c-card{background:var(--dark);border:1px solid rgba(255,255,255,0.04);border-radius:12px;padding:24px;text-align:center;transition:.3s}
+.c-card:hover{border-color:rgba(201,162,39,0.15)}
+.c-card-i{font-size:24px;margin-bottom:8px}
+.c-card-l{font-size:9px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+.c-card-v{font-size:13px;color:var(--white);font-weight:600}
+.c-card-v a{color:var(--gold)}
 
 /* ═══ FOOTER ═══ */
-footer{background:var(--dark);border-top:1px solid rgba(201,162,39,0.08);padding:40px 5%;text-align:center}
-footer img{height:40px;margin-bottom:16px;opacity:0.7}
-.foot-text{font-size:11px;color:var(--gray-dark)}
+footer{border-top:1px solid rgba(201,162,39,0.06);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer img{height:30px;opacity:.6}
+footer span{font-size:10px;color:var(--gray);letter-spacing:1px}
 
 /* ═══ LIGHTBOX ═══ */
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.3s;cursor:pointer}
-.lightbox.open{opacity:1;pointer-events:auto}
-.lightbox img{max-width:90%;max-height:90vh;object-fit:contain;border-radius:8px}
-.lb-close{position:absolute;top:20px;right:20px;background:none;border:2px solid rgba(255,255,255,0.3);color:white;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}
-.lb-close:hover{border-color:var(--gold);color:var(--gold)}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.3s;cursor:pointer}
+.lb.open{opacity:1;pointer-events:auto}
+.lb img{max-width:90%;max-height:90vh;object-fit:contain;border-radius:8px}
+.lb-x{position:absolute;top:20px;right:20px;background:none;border:2px solid rgba(255,255,255,0.3);color:white;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+
+/* ═══ COMING SOON ═══ */
+.cs-popup{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.4s}
+.cs-popup.show{opacity:1;pointer-events:auto}
+.cs-box{background:var(--dark);border:2px solid var(--gold);border-radius:16px;max-width:460px;width:90%;overflow:hidden;position:relative}
+.cs-box img{width:100%;height:180px;object-fit:cover}
+.cs-body{padding:24px;text-align:center}
+.cs-close{position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.2);color:white;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:900px){
-  .nav-links{display:none}.hamburger{display:block}
-  .gallery-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery-item.wide{grid-column:span 1}
-  .contact-grid{grid-template-columns:1fr}
-  .hero-logo{width:240px}
+  .nav-r{display:none}.hamburger{display:block}
+  .orbit-container{width:min(420px,90vw);height:min(420px,90vw)}
+  .orbit-item{width:70px;height:70px;border-radius:12px}
+  .orbit-center{width:200px}
+  .orbit-logo{width:130px}
+  .g-grid{columns:2}
+  .c-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:480px){
-  .gallery-grid{grid-template-columns:1fr}
-  .srv-grid{grid-template-columns:repeat(2,1fr)}
-  .hero-logo{width:200px}
-  .hero-btns{flex-direction:column;align-items:center}
+  .orbit-container{width:min(340px,95vw);height:min(340px,95vw)}
+  .orbit-item{width:56px;height:56px;border-radius:10px}
+  .orbit-center{width:160px}
+  .orbit-logo{width:110px}
+  .orbit-title{font-size:16px}
+  .g-grid{columns:1}
+  .c-grid{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column;align-items:center;bottom:40px}
+  footer{justify-content:center;text-align:center}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo"><img src="LOGO.png" alt="Golden State Blueprint"></a>
-  <div class="nav-links">
-    <a href="#services">Services</a>
+  <a href="#"><img src="LOGO.png" alt="Golden State Blueprint"></a>
+  <div class="nav-r">
     <a href="#gallery">Work</a>
     <a href="#contact">Contact</a>
     <a href="tel:8183187439" class="nav-call">(818) 318-7439</a>
   </div>
-  <div class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div>
+  <div class="hamburger" onclick="document.getElementById('m').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
-<div class="mob-overlay" id="mob">
-  <a href="#services" onclick="document.getElementById('mob').classList.remove('open')">Services</a>
-  <a href="#gallery" onclick="document.getElementById('mob').classList.remove('open')">Work</a>
-  <a href="#contact" onclick="document.getElementById('mob').classList.remove('open')">Contact</a>
+<div class="mob" id="m">
+  <a href="#gallery" onclick="document.getElementById('m').classList.remove('open')">Work</a>
+  <a href="#contact" onclick="document.getElementById('m').classList.remove('open')">Contact</a>
   <a href="tel:8183187439" style="color:var(--gold)">Call Now</a>
 </div>
 
-<!-- HERO -->
+<!-- HERO WITH ORBITAL IMAGES -->
 <section id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <img src="LOGO.png" alt="Golden State Blueprint" class="hero-logo">
-    <div class="hero-tagline">North Hollywood, CA</div>
-    <h1 class="hero-title">We Make Your<br><span class="hero-rotate"><span class="word">Business Cards</span><span class="word">Banners</span><span class="word">Vehicle Wraps</span><span class="word">Blueprints</span></span></h1>
-    <p class="hero-sub">Premium printing for your business. Business cards, banners, large format, vehicle wraps, signage, and more. Same day available.</p>
-    <div class="hero-btns">
-      <a href="tel:8183187439" class="btn-gold">Call (818) 318-7439</a>
-      <a href="#gallery" class="btn-outline">See Our Work</a>
+  <div class="orbit-container">
+    <div class="orbit-center">
+      <img src="LOGO.png" alt="Golden State Blueprint" class="orbit-logo">
+      <div class="orbit-title">We Print <span>Everything</span></div>
+      <div class="orbit-sub">North Hollywood, CA</div>
+    </div>
+    <div class="orbit-ring">
+      <div class="orbit-item" onclick="openLB(this)"><img src="tarjetas.jpg" alt="Business Cards"><div class="orbit-label">Cards</div></div>
+      <div class="orbit-item" onclick="openLB(this)"><img src="banner 1.jpg" alt="Banners"><div class="orbit-label">Banners</div></div>
+      <div class="orbit-item" onclick="openLB(this)"><img src="wrap1.jpg" alt="Wraps"><div class="orbit-label">Wraps</div></div>
+      <div class="orbit-item" onclick="openLB(this)"><img src="planos.png" alt="Blueprints"><div class="orbit-label">Plans</div></div>
+      <div class="orbit-item" onclick="openLB(this)"><img src="granformato.jpeg" alt="Large Format"><div class="orbit-label">Large Format</div></div>
+      <div class="orbit-item" onclick="openLB(this)"><img src="camisas y gorras personalizadas.jpg" alt="Apparel"><div class="orbit-label">Apparel</div></div>
+      <div class="orbit-item" onclick="openLB(this)"><img src="banner 2.jpg" alt="Flags"><div class="orbit-label">Flags</div></div>
+      <div class="orbit-item" onclick="openLB(this)"><img src="website design.jpg" alt="Web Design"><div class="orbit-label">Web</div></div>
     </div>
   </div>
-  <div class="scroll-down">Scroll</div>
+  <div class="hero-cta">
+    <a href="tel:8183187439" class="btn-g">Call (818) 318-7439</a>
+    <a href="#gallery" class="btn-o">See Our Work</a>
+  </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SCROLLING SERVICES -->
 <section id="services">
-  <div class="sec-label">What We Do</div>
-  <div class="sec-title">Our Services</div>
-  <div class="srv-grid">
-    <div class="srv-card" style="border-color:rgba(201,162,39,0.2);background:rgba(201,162,39,0.04)">
-      <span class="srv-icon">&#128196;</span>
-      <div class="srv-name" style="color:var(--gold)">Business Cards</div>
-      <div class="srv-desc">Premium cards, same day available</div>
+  <div class="srv-scroll">
+    <div class="srv-chip"><span>&#128196;</span><span>Business Cards</span></div>
+    <div class="srv-chip"><span>&#127463;</span><span>Banners</span></div>
+    <div class="srv-chip"><span>&#128663;</span><span>Vehicle Wraps</span></div>
+    <div class="srv-chip"><span>&#128220;</span><span>Blueprints</span></div>
+    <div class="srv-chip"><span>&#128444;</span><span>Large Format</span></div>
+    <div class="srv-chip"><span>&#9997;</span><span>Signage</span></div>
+    <div class="srv-chip"><span>&#127912;</span><span>Stickers</span></div>
+    <div class="srv-chip"><span>&#128085;</span><span>Custom Apparel</span></div>
+    <div class="srv-chip"><span>&#128424;</span><span>Plan Copies</span></div>
+    <div class="srv-chip"><span>&#128187;</span><span>Web Design</span></div>
+    <div class="srv-chip"><span>&#127912;</span><span>Graphic Design</span></div>
+    <!-- duplicate for seamless scroll -->
+    <div class="srv-chip"><span>&#128196;</span><span>Business Cards</span></div>
+    <div class="srv-chip"><span>&#127463;</span><span>Banners</span></div>
+    <div class="srv-chip"><span>&#128663;</span><span>Vehicle Wraps</span></div>
+    <div class="srv-chip"><span>&#128220;</span><span>Blueprints</span></div>
+    <div class="srv-chip"><span>&#128444;</span><span>Large Format</span></div>
+    <div class="srv-chip"><span>&#9997;</span><span>Signage</span></div>
+    <div class="srv-chip"><span>&#127912;</span><span>Stickers</span></div>
+    <div class="srv-chip"><span>&#128085;</span><span>Custom Apparel</span></div>
+    <div class="srv-chip"><span>&#128424;</span><span>Plan Copies</span></div>
+    <div class="srv-chip"><span>&#128187;</span><span>Web Design</span></div>
+    <div class="srv-chip"><span>&#127912;</span><span>Graphic Design</span></div>
+  </div>
+</section>
+
+<!-- SERVICES WITH PHOTOS -->
+<section id="work" style="padding:80px 5%">
+  <div style="text-align:center;margin-bottom:48px">
+    <div class="sec-label">What We Do</div>
+    <div class="sec-title">Our Services</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px">
+    <div class="svc" onclick="openLB(this)">
+      <img src="tarjetas.jpg" alt="Business Cards">
+      <div class="svc-info"><h3>Business Cards</h3><p>Standard, rounded, folded, slim, die-cut. Premium finishes. Same day available. Make your first impression count.</p></div>
     </div>
-    <div class="srv-card" style="border-color:rgba(201,162,39,0.2);background:rgba(201,162,39,0.04)">
-      <span class="srv-icon">&#127463;</span>
-      <div class="srv-name" style="color:var(--gold)">Banners</div>
-      <div class="srv-desc">Indoor & outdoor vinyl banners any size</div>
+    <div class="svc" onclick="openLB(this)">
+      <img src="banner 1.jpg" alt="Banners">
+      <div class="svc-info"><h3>Banners & Displays</h3><p>Vinyl banners, retractable banners, feather flags, trade show displays. Indoor and outdoor. Any size you need.</p></div>
     </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#128663;</span>
-      <div class="srv-name">Vehicle Wraps</div>
-      <div class="srv-desc">Full & partial wraps, fleet graphics</div>
+    <div class="svc" onclick="openLB(this)">
+      <img src="wrap1.jpg" alt="Vehicle Wraps">
+      <div class="svc-info"><h3>Vehicle Wraps</h3><p>Full wraps, partial wraps, fleet graphics. Turn your vehicle into a moving billboard. Professional installation.</p></div>
     </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#128220;</span>
-      <div class="srv-name">Blueprints</div>
-      <div class="srv-desc">Plotting & scanning of architectural plans</div>
+    <div class="svc" onclick="openLB(this)">
+      <img src="planos.png" alt="Blueprints">
+      <div class="svc-info"><h3>Blueprints & Plans</h3><p>Architectural plan printing, scanning, and copying. B&W and color. Up to 36" wide. Fast turnaround for contractors.</p></div>
     </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#128444;</span>
-      <div class="srv-name">Large Format</div>
-      <div class="srv-desc">Posters, canvas, foam board prints</div>
+    <div class="svc" onclick="openLB(this)">
+      <img src="granformato.jpeg" alt="Large Format">
+      <div class="svc-info"><h3>Large Format Printing</h3><p>Posters, foam board, canvas prints, wall murals, window graphics. High resolution printing up to any size.</p></div>
     </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#9997;</span>
-      <div class="srv-name">Signage</div>
-      <div class="srv-desc">Storefront signs, yard signs, A-frames</div>
+    <div class="svc" onclick="openLB(this)">
+      <img src="camisas y gorras personalizadas.jpg" alt="Custom Apparel">
+      <div class="svc-info"><h3>Custom Apparel</h3><p>T-shirts, hats, hoodies, uniforms with your logo. Screen printing and heat transfer. Bulk orders welcome.</p></div>
     </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#127912;</span>
-      <div class="srv-name">Stickers & Decals</div>
-      <div class="srv-desc">Custom stickers, labels, vinyl decals</div>
+    <div class="svc" onclick="openLB(this)">
+      <img src="wrap2.jpg" alt="Fleet Graphics">
+      <div class="svc-info"><h3>Stickers & Decals</h3><p>Custom stickers, labels, vinyl decals, window lettering, wall decals. Die-cut or sheet. Any quantity.</p></div>
     </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#128424;</span>
-      <div class="srv-name">Plan Copies</div>
-      <div class="srv-desc">Blueprint copies, scanning, large format B&W</div>
-    </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#127912;</span>
-      <div class="srv-name">Graphic Design</div>
-      <div class="srv-desc">Logos, flyers, marketing materials</div>
-    </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#128085;</span>
-      <div class="srv-name">Custom Apparel</div>
-      <div class="srv-desc">T-shirts, hats, uniforms with your logo</div>
-    </div>
-    <div class="srv-card">
-      <span class="srv-icon">&#128187;</span>
-      <div class="srv-name">Web Design</div>
-      <div class="srv-desc">Professional websites for your business</div>
+    <div class="svc" onclick="openLB(this)">
+      <img src="website design.jpg" alt="Web Design">
+      <div class="svc-info"><h3>Website Design</h3><p>Professional websites for your business. Modern designs, mobile friendly, fast loading. Get online today.</p></div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery">
-  <div class="gallery-header">
+  <div class="gallery-head">
     <div class="sec-label">Portfolio</div>
-    <div class="sec-title">Our Work Speaks</div>
+    <div class="sec-title">Our Work</div>
   </div>
-  <div class="gallery-grid">
-    <div class="gallery-item wide" onclick="openLB(this)">
-      <img src="tarjetas.jpg" alt="Business cards - all shapes and styles" loading="lazy">
-      <div class="gallery-label">Business Cards</div>
-    </div>
-    <div class="gallery-item" onclick="openLB(this)">
-      <img src="banner 1.jpg" alt="Large format banner display" loading="lazy">
-      <div class="gallery-label">Large Format Banners</div>
-    </div>
-    <div class="gallery-item" onclick="openLB(this)">
-      <img src="wrap1.jpg" alt="Professional vehicle wrap" loading="lazy">
-      <div class="gallery-label">Vehicle Wraps</div>
-    </div>
-    <div class="gallery-item" onclick="openLB(this)">
-      <img src="granformato.jpeg" alt="Large format printer in action" loading="lazy">
-      <div class="gallery-label">Large Format Printing</div>
-    </div>
-    <div class="gallery-item wide" onclick="openLB(this)">
-      <img src="wrap2.jpg" alt="Fleet vehicle wrap design" loading="lazy">
-      <div class="gallery-label">Fleet Graphics & Wraps</div>
-    </div>
-    <div class="gallery-item" onclick="openLB(this)">
-      <img src="planos.png" alt="Architectural blueprint copies" loading="lazy">
-      <div class="gallery-label">Blueprints & Plan Copies</div>
-    </div>
-    <div class="gallery-item" onclick="openLB(this)">
-      <img src="camisas y gorras personalizadas.jpg" alt="Custom t-shirts and hats" loading="lazy">
-      <div class="gallery-label">Custom Apparel</div>
-    </div>
-    <div class="gallery-item" onclick="openLB(this)">
-      <img src="banner 2.jpg" alt="Feather flag banner" loading="lazy">
-      <div class="gallery-label">Flags & Displays</div>
-    </div>
-    <div class="gallery-item" onclick="openLB(this)">
-      <img src="website design.jpg" alt="Creative website design" loading="lazy">
-      <div class="gallery-label">Website Design</div>
-    </div>
-    <div class="gallery-item wide" onclick="openLB(this)">
-      <img src="FOTO EXTERNA.jpg" alt="Golden State Blueprint storefront" loading="lazy">
-      <div class="gallery-label">Visit Our Shop</div>
-    </div>
+  <div class="g-grid">
+    <div class="g-item" onclick="openLB(this)"><img src="tarjetas.jpg" alt="Business Cards" loading="lazy"><div class="g-label">Business Cards</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="wrap1.jpg" alt="Vehicle Wrap" loading="lazy"><div class="g-label">Vehicle Wraps</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="banner 1.jpg" alt="Large Banner" loading="lazy"><div class="g-label">Large Banners</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="granformato.jpeg" alt="Large Format Printing" loading="lazy"><div class="g-label">Large Format Printing</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="wrap2.jpg" alt="Fleet Wrap Design" loading="lazy"><div class="g-label">Fleet Wraps</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="planos.png" alt="Blueprints" loading="lazy"><div class="g-label">Blueprints</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="camisas y gorras personalizadas.jpg" alt="Custom Apparel" loading="lazy"><div class="g-label">Custom Apparel</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="banner 2.jpg" alt="Flags" loading="lazy"><div class="g-label">Flags & Displays</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="website design.jpg" alt="Web Design" loading="lazy"><div class="g-label">Website Design</div></div>
+    <div class="g-item" onclick="openLB(this)"><img src="FOTO EXTERNA.jpg" alt="Our Shop" loading="lazy"><div class="g-label">Our Shop</div></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section id="cta">
-  <div class="cta-title">Ready to Print?</div>
-  <div class="cta-sub">Walk in, call, or send us your files. Same day service available.</div>
-  <a href="tel:8183187439" class="btn-dark">Call Now &mdash; (818) 318-7439</a>
+  <h2>Ready to Print?</h2>
+  <p>Walk in, call, or send your files. Same day service available.</p>
+  <a href="tel:8183187439" class="btn-bk">Call (818) 318-7439</a>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="contact-grid">
-    <div class="contact-info">
-      <div class="sec-label">Get in Touch</div>
-      <div class="sec-title" style="margin-bottom:24px">Visit Our Shop</div>
-      <div class="c-item">
-        <div class="c-icon">&#128205;</div>
-        <div>
-          <div class="c-label">Location</div>
-          <div class="c-val">8055 Lankershim Blvd #10<br>North Hollywood, CA 91605</div>
-        </div>
-      </div>
-      <div class="c-item">
-        <div class="c-icon">&#128222;</div>
-        <div>
-          <div class="c-label">Phone</div>
-          <div class="c-val"><a href="tel:8183187439">(818) 318-7439</a></div>
-        </div>
-      </div>
-      <div class="c-item">
-        <div class="c-icon">&#128231;</div>
-        <div>
-          <div class="c-label">Email</div>
-          <div class="c-val"><a href="mailto:goldenstateblueprint@goldenstate-blueprint.com">goldenstateblueprint@goldenstate-blueprint.com</a></div>
-        </div>
-      </div>
-      <div class="c-item">
-        <div class="c-icon">&#128336;</div>
-        <div>
-          <div class="c-label">Hours</div>
-          <div class="c-val">Mon–Fri: 9AM – 4PM<br>Sat: 9AM – 1PM<br>Sun: Closed</div>
-        </div>
-      </div>
-      <div class="c-item">
-        <div class="c-icon">&#128179;</div>
-        <div>
-          <div class="c-label">Payment</div>
-          <div class="c-val">Cash, Credit Cards, Apple Pay</div>
-        </div>
-      </div>
+  <div style="text-align:center">
+    <div class="sec-label">Visit Us</div>
+    <div class="sec-title">Get in Touch</div>
+  </div>
+  <div class="c-grid">
+    <div class="c-card">
+      <div class="c-card-i">&#128205;</div>
+      <div class="c-card-l">Address</div>
+      <div class="c-card-v">8055 Lankershim Blvd #10<br>North Hollywood, CA</div>
     </div>
-    <div class="contact-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.5!2d-118.393!3d34.198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDExJzUyLjgiTiAxMTjCsDIzJzM0LjgiVw!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy"></iframe>
+    <div class="c-card">
+      <div class="c-card-i">&#128222;</div>
+      <div class="c-card-l">Phone</div>
+      <div class="c-card-v"><a href="tel:8183187439">(818) 318-7439</a></div>
+    </div>
+    <div class="c-card">
+      <div class="c-card-i">&#128231;</div>
+      <div class="c-card-l">Email</div>
+      <div class="c-card-v"><a href="mailto:goldenstateblueprint@goldenstate-blueprint.com" style="font-size:11px">goldenstateblueprint@<br>goldenstate-blueprint.com</a></div>
+    </div>
+    <div class="c-card">
+      <div class="c-card-i">&#128336;</div>
+      <div class="c-card-l">Hours</div>
+      <div class="c-card-v">Mon-Fri 9-4<br>Sat 9-1</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <img src="LOGO.png" alt="Golden State Blueprint">
-  <div class="foot-text">&copy; 2025 Golden State Blueprint & Printing. All rights reserved.</div>
+  <span>&copy; 2025 Golden State Blueprint & Printing</span>
 </footer>
 
 <!-- COMING SOON POPUP -->
-<div id="comingSoon" style="position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s">
-  <div style="background:var(--dark);border:2px solid var(--gold);border-radius:16px;max-width:500px;width:90%;overflow:hidden;position:relative">
-    <img src="diseno de planos coming soon proximamente.jpg" alt="Blueprint Design Coming Soon" style="width:100%;height:200px;object-fit:cover">
-    <div style="padding:28px;text-align:center">
-      <div style="font-size:11px;font-weight:700;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:8px">Coming Soon</div>
-      <h3 style="font-size:24px;font-weight:800;color:var(--white);margin-bottom:12px;font-family:var(--font)">Blueprint Design Services</h3>
-      <p style="font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:24px">We're expanding! Soon we'll offer professional architectural blueprint design services. Stay tuned.</p>
-      <button onclick="document.getElementById('comingSoon').style.opacity='0';document.getElementById('comingSoon').style.pointerEvents='none'" style="padding:12px 32px;background:var(--gold);color:var(--black);font-weight:800;font-size:13px;border:none;border-radius:4px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;transition:.3s">Got It</button>
+<div class="cs-popup" id="cs">
+  <div class="cs-box">
+    <button class="cs-close" onclick="document.getElementById('cs').classList.remove('show')">&#x2715;</button>
+    <img src="diseno de planos coming soon proximamente.jpg" alt="Blueprint Design">
+    <div class="cs-body">
+      <div style="font-size:10px;font-weight:700;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:6px">Coming Soon</div>
+      <h3 style="font-size:20px;font-weight:900;color:var(--white);margin-bottom:10px">Blueprint Design Services</h3>
+      <p style="font-size:13px;color:var(--gray);line-height:1.6;margin-bottom:20px">Professional architectural blueprint design. Stay tuned!</p>
+      <button onclick="document.getElementById('cs').classList.remove('show')" style="padding:10px 28px;background:var(--gold);color:var(--black);font-weight:800;font-size:12px;border:none;border-radius:4px;cursor:pointer;letter-spacing:1px;text-transform:uppercase">Got It</button>
     </div>
-    <button onclick="document.getElementById('comingSoon').style.opacity='0';document.getElementById('comingSoon').style.pointerEvents='none'" style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.2);color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">&#x2715;</button>
   </div>
 </div>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLB()">
-  <button class="lb-close" onclick="closeLB()">&#x2715;</button>
-  <img id="lbImg" src="" alt="">
+<div class="lb" id="lb" onclick="closeLB()">
+  <button class="lb-x" onclick="closeLB()">&#x2715;</button>
+  <img id="lbI" src="">
 </div>
 
 <script>
-// Coming Soon popup - show after 2 seconds
-setTimeout(()=>{
-  const cs=document.getElementById('comingSoon');
-  cs.style.opacity='1';cs.style.pointerEvents='auto';
-},2000);
-
-function openLB(el){
-  const img=el.querySelector('img');
-  document.getElementById('lbImg').src=img.src;
-  document.getElementById('lightbox').classList.add('open');
-}
-function closeLB(){document.getElementById('lightbox').classList.remove('open')}
+function openLB(el){const i=el.querySelector('img');document.getElementById('lbI').src=i.src;document.getElementById('lb').classList.add('open')}
+function closeLB(){document.getElementById('lb').classList.remove('open')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
+setTimeout(()=>document.getElementById('cs').classList.add('show'),2500);
 </script>
 </body>
 </html>
